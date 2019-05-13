@@ -9,6 +9,7 @@ public class myTime {
 		this.hour = hour;
 		this.min = min;
 		this.sec = sec;
+//		test
 	}
 
 	public myTime() {
