@@ -22,33 +22,31 @@ public class Plotter {
 
 	public static void main(String[] args) {
 		// Fenster mit Funktion erstellen:
-		PlotterFrame p = new PlotterFrame(new F1);
+		PlotterFrame p = new PlotterFrame(new Quad());
 		// Fenster anzeigen:
-		p.show();
+		p.setVisible(true);
 	}
 }
 
-interface...
-
-class F1 implements DoubleMethod {
-	compute(double wert);
-}
-
-class F2 implements DoubleMethod {
-}
-
-class F3 implements DoubleMethod {
-}
-
-
-public interface DoubleMethod {
+interface DoubleMethod {
 	public double compute(double value);
-
 }
 
-public class PlotterFrame extends JFrame{
-	PlotterFrame(DoubleMethod funktion){
-		setSize(600,600);
+class Quad implements DoubleMethod {
+	public double compute(double wert) {
+		return wert * wert;
+	}
+}
+
+//class F2 implements DoubleMethod {
+//}
+//
+//class F3 implements DoubleMethod {
+//}
+
+class PlotterFrame extends JFrame {
+	PlotterFrame(DoubleMethod funktion) {
+		setSize(600, 600);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setTitle("Funktionsplotter");
 		PlotPanel p = new PlotPanel(funktion);
@@ -57,15 +55,14 @@ public class PlotterFrame extends JFrame{
 	}
 }
 
-		class PlotPanel extends JPanel {
-			DoubleMethod f;
+class PlotPanel extends JPanel {
+	DoubleMethod f;
 
-			PlotPanel(DoubleMethod f) {
-		
-				this.f = f;
-			}
+	PlotPanel(DoubleMethod f) {
+		this.f = f;
+	}
 
-			public void paintComponent(Graphics g) {
+	public void paintComponent(Graphics g) {
 				super.paintComponent(g);
 				Graphics2D g2 = (Graphics2D) g;
 
@@ -91,7 +88,7 @@ public class PlotterFrame extends JFrame{
 				}
 			}
 
-			public Point2D anzeigeCoord(double x, double y) {
-				return new Point2D.Double(x + this.getWidth() / 2, this.getHeight() / 2 - y);
-			}
+	public Point2D anzeigeCoord(double x, double y) {
+		return new Point2D.Double(x + this.getWidth() / 2, this.getHeight() / 2 - y);
+	}
 }
