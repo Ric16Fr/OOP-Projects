@@ -4,7 +4,7 @@ package IntList;
 public class IntListTest {
 
     /**
-     * @param args
+     * @param ar
      */
     public static void main(String[] args) {
         
