@@ -1,3 +1,4 @@
+package media;
 
 public class MedienManagerTest {
 

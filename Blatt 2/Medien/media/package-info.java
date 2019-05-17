@@ -5,4 +5,4 @@
  * @author Philine
  *
  */
-package Medien;
+package media;

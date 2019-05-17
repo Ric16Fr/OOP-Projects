@@ -20,7 +20,7 @@ import javax.swing.*;
  *         To change the template for this generated type comment go to Window -
  *         Preferences - Java - Code Generation - Code and Comments
  */
-public class Plotter {
+public class plott {
 
 	public static void main(String[] args) {
 		// Fenster mit Funktion erstellen:
@@ -77,7 +77,7 @@ class PlotPanel extends JPanel {
 				// Wertetabelle berechnen
 				final int UMFANG = 200; // Wieviele zu differenziernde x-Werte
 				double weite = UMFANG / (double) getWidth(); // Weite eines Pixelschrittes im Koordinatensystem
-				ArrayList<Point 2D> punkteListe = new ArrayList<Point 2D>();
+				ArrayList<Point2D> punkteListe = new ArrayList<Point2D>();
 				for (int x = -getWidth() / 2; x <= getWidth() / 2; x++) {
 					// punkteListe.add(anzeigeCoord(x, (1/weite)*f.compute(weite*x)));
 					punkteListe.add(anzeigeCoord(x, 40 * f.compute((1 / 40.0) * x)));
