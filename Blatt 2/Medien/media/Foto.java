@@ -1,10 +1,10 @@
 package media;
 
-public class Fotos extends Elektronisch {
+public class Foto extends Physisch {
 	int year;
 
-	public Fotos(String title, int year, String path) {
-		super(title, path);
+	public Foto(String title, int year, String owner) {
+		super(title, owner);
 		this.year = year;
 		super.display();
 		// TODO Auto-generated constructor stub

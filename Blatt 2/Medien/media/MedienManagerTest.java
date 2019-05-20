@@ -3,7 +3,7 @@ package media;
 public class MedienManagerTest {
 
     public static void main(String[] args) {
-        myMedien m = new myMedien(); 
+        myMedia m = new myMedia(); 
         m.add(new EBook("Objektorientierte Programmierung in Java", "Niemann, Alexander", 2012, "bhv", "/Dokumente/Uni/eBooks"));
         m.add(new Buch("Java ist auch eine Insel", "Ullenboom, Christian", 2011, "Gallileo", "HWR Lichtenberg", 578));
         System.out.println("***************************");
