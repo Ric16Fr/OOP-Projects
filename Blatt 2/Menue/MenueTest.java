@@ -1,3 +1,4 @@
+package Menue;
 import java.io.IOException;
 
 public class MenueTest {
