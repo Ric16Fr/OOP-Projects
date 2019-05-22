@@ -17,4 +17,10 @@ public class FotoDigital extends Elektronisch {
 	public void setYear(int year) {
 		this.year = year;
 	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+		System.out.println("Digitalfoto \n" + "Titel: " + getTitle() + "\n" + "Pfad: " + getPath());
+	}
 }

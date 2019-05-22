@@ -10,4 +10,17 @@ public class Foto extends Physisch {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+		System.out.println("Foto \n" + "Titel: " + getTitle() + "\n" + "Eigentümer" + getOwner());
+	}
 }

@@ -21,9 +21,31 @@ public class myMedia {
 		}
 	}
 
-	public void suche(String string) {
-	
-		
+	public void suche(String text) {
+		int c = 0;
+		for (int i = 0; i < menge; i++) {
+			if (medium[i].getTitle().contains(text)) {
+				medium[i].display();
+				c++;
+			}
+		}
+		System.out.println(c);
+	}
+
+	public Media[] getMedium() {
+		return medium;
+	}
+
+	public void setMedium(Media[] medium) {
+		this.medium = medium;
+	}
+
+	public int getMenge() {
+		return menge;
+	}
+
+	public void setMenge(int menge) {
+		this.menge = menge;
 	}
 
 }

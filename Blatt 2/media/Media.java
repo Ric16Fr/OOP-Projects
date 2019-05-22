@@ -7,4 +7,6 @@ public abstract class Media {
 
 	public abstract void display();
 
+	protected abstract String getTitle();
+
 }

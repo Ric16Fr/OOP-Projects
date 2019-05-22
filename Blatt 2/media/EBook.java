@@ -18,7 +18,7 @@ public class EBook extends Elektronisch {
 	public void display() {
 		// TODO Auto-generated method stub
 
-		System.out.println("EBook \n" + "Titel: " + getTitle() + "\n" + "Autor: " + getAuthor());
+		System.out.println("EBook \n" + "Titel: " + getTitle() + "\n" + "Pfad: " + getPath());
 	}
 
 	public int getYear() {
