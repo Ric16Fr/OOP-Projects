@@ -23,7 +23,7 @@ public class Addition extends Ausdruck {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return sum1 + " + " + sum2 ;
+		return "(" + sum1 + " + " + sum2 + ")";
 	}
 
 }

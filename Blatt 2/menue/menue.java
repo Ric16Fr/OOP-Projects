@@ -21,15 +21,12 @@ public class menue {
 			z = Integer.parseInt(eingabe);
 			if (z == 1) {
 				System.out.println("Kastanie");
-			}
-			if (z == 2) {
+			} else if (z == 2) {
 				System.out.println("Erle");
-			}
-			if (z < 2 || z > 1) {
+			} else if (z < 2 || z > 1) {
 				JOptionPane.showInputDialog("Fehler, bitte beginnen Sie von vorn.");
 			}
-		}
-		if (z == 2) {
+		} else if (z == 2) {
 			System.out.println("Toll. Sie sind auf Seite 2.");
 			System.out.println("__________________");
 			System.out.println();
@@ -37,17 +34,14 @@ public class menue {
 			z = Integer.parseInt(eingabe);
 			if (z == 1) {
 				System.out.println("Rose");
-			}
-			if (z == 2) {
+			} else if (z == 2) {
 //				Image img;
 //				img = ImageIO.read("C:\Users\tinme\Pictures\dahlie.jpg");
 				System.out.println("Dhalie");
-			}
-			if (z < 2 || z > 1) {
+			} else if (z < 2 || z > 1) {
 				JOptionPane.showMessageDialog(null, "Fehler, bitte beginnen Sie von vorn.");
 			}
-		}
-		if (z < 2 || z > 1) {
+		} else if (z < 2 || z > 1) {
 			JOptionPane.showMessageDialog(null, "Fehler, bitte beginnen Sie von vorn.");
 		}
 	}

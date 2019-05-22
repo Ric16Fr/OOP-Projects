@@ -20,7 +20,7 @@ public class Subtraktion extends Ausdruck {
 
 	@Override
 	public String toString() {
-		return min + " - " + sub;
+		return "(" + min + " - " + sub + ")";
 	}
 
 }
