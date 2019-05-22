@@ -2,9 +2,7 @@ package arithmetik;
 
 public abstract class Ausdruck {
 
-	public float auswerten() {
-		return 0;
-	}
+	public abstract float auswerten();
 
 	public abstract String toString();
 

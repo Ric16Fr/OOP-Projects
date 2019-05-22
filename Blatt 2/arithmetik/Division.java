@@ -20,8 +20,10 @@ public class Division extends Ausdruck {
 
 	@Override
 	public String toString() {
+		float x;
+		x = divd.auswerten() / divi.auswerten();
 		// TODO Auto-generated method stub
-		return null;
+		return "("+divd + " / " + divi + " = " + x;
 	}
 
 }

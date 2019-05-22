@@ -23,8 +23,10 @@ public class Multiplikation extends Ausdruck {
 
 	@Override
 	public String toString() {
+		float x;
+		x = a.auswerten() * b.auswerten();
 		// TODO Auto-generated method stub
-		return null;
+		return a + " * " + b + " = " + x;
 	}
 
 }

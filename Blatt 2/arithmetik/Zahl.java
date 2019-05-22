@@ -1,9 +1,10 @@
 package arithmetik;
 
 public class Zahl extends Ausdruck {
-	Ausdruck number;
-	public Zahl(Ausdruck number) {
-		this.number=number;
+	int number;
+
+	public Zahl(int number) {
+		this.number = number;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -15,7 +16,15 @@ public class Zahl extends Ausdruck {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return null;
+		return String.valueOf(number);
 	}
-	
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
 }

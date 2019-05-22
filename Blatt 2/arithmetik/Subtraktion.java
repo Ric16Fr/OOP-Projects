@@ -20,7 +20,9 @@ public class Subtraktion extends Ausdruck {
 
 	@Override
 	public String toString() {
-		return min.auswerten() + " - " + sub.auswerten() + " = " + min - sub;
+		float x;
+		x = min.auswerten() - sub.auswerten();
+		return min + " - " + sub + " = " + x;
 	}
 
 }

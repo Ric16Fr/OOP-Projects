@@ -1,4 +1,4 @@
-package Menue;
+package menue;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
