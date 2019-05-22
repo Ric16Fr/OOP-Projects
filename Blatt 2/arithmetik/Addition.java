@@ -22,10 +22,8 @@ public class Addition extends Ausdruck {
 
 	@Override
 	public String toString() {
-		float x;
-		x = sum1.auswerten() + sum2.auswerten();
 		// TODO Auto-generated method stub
-		return sum1 + " + " + sum2 + " = " + x;
+		return sum1 + " + " + sum2 ;
 	}
 
 }
