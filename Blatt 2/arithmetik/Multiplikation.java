@@ -1,7 +1,10 @@
 package arithmetik;
 
 public class Multiplikation extends Ausdruck {
-	public Multiplikation(int a, int b) {
+	Ausdruck a;
+	Ausdruck b;
+
+	public Multiplikation(Ausdruck a, Ausdruck b) {
 		this.a = a;
 		this.b = b;
 
@@ -11,11 +14,8 @@ public class Multiplikation extends Ausdruck {
 	@Override
 	public float auswerten() {
 		float x;
-		float a;
-		float b;
-		a = getA();
-		b = getB();
-		x = a * b;
+
+		x = a.auswerten() * b.auswerten();
 
 		// TODO Auto-generated method stub
 		return x;

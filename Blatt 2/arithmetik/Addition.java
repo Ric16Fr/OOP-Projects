@@ -1,10 +1,12 @@
 package arithmetik;
 
 public class Addition extends Ausdruck {
+	private Ausdruck sum1;
+	private Ausdruck sum2;
 
-	public Addition(int a, int b) {
-		this.a = a;
-		this.b = b;
+	public Addition(Ausdruck sum1, Ausdruck sum2) {
+		this.sum1=sum1;
+		this.sum2=sum2; 
 
 		// TODO Auto-generated constructor stub
 	}
@@ -12,7 +14,7 @@ public class Addition extends Ausdruck {
 	@Override
 	public float auswerten() {
 		int x;
-		x = getA() + getB();
+		x = (int) (sum1.auswerten()+sum2.auswerten());
 		return x;
 		// TODO Auto-generated method stub
 
@@ -21,7 +23,7 @@ public class Addition extends Ausdruck {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return null;
+		return sum1+" + "+sum2+" = "+sum1+sum2 ;
 	}
 
 }

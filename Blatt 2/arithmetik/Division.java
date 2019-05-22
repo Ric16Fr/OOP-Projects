@@ -1,16 +1,19 @@
 package arithmetik;
 
 public class Division extends Ausdruck {
-	public Division(int a, int b) {
-		this.a = a;
-		this.b = b;
+	Ausdruck divd;
+	Ausdruck divi;
+
+	public Division(Ausdruck divd, Ausdruck divi) {
+		this.divd = divd;
+		this.divi = divi;
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public float auswerten() {
 		float x;
-		x = getA() / getB();
+		x = divd.auswerten() / divi.auswerten();
 		// TODO Auto-generated method stub
 		return x;
 	}
