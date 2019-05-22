@@ -22,7 +22,7 @@ public class myMedia {
 	}
 
 	public void suche(String string) {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
