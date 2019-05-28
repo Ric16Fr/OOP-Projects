@@ -23,11 +23,12 @@ public class MedienManagerTest {
 		System.out.println("TEST ÜBUNGSBLATT 3");
 		System.out.println("____________");
 
-		FotoDigital urlaub = new Foto("London", 2019, "Regal");
+		Foto urlaub = new Foto("London", 2019, "Regal");
 		m.writeObject(urlaub);
 		FotoDigital geburtstag = new FotoDigital("Feier 2018", 2018, "C:\\Bilder\\Geburtstag");
 		m.writeObject(geburtstag);
 		Filme aladdin = new Film("Essen leicht gemacht", 100, 128, "Tim");
 		m.writeObject(aladdin);
 	}
+}
 }
