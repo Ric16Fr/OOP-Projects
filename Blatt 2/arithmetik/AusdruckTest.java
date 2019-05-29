@@ -16,6 +16,7 @@ public class AusdruckTest {
 		Ausdruck e = new Multiplikation(new Zahl(10), d);
 		System.out.println(e + " = " + e.auswerten());
 		System.out.println();
+<<<<<<< HEAD
 //		System.out.println("Dritter Test (mit Variablen): (10 * (((x + 7) / 3) - y)) = 50 mit x=23 und y=5");
 //		Bindungen bind = new Bindungen();
 //		bind.set("x", 23);
@@ -32,5 +33,23 @@ public class AusdruckTest {
 //		bind.set("y", 3);
 //		System.out.println(i + " = " + i.auswerten(bind));
 //		System.out.println(bind);
+=======
+		System.out.println("Dritter Test (mit Variablen): (10 * (((x + 7) / 3) - y)) = 50 mit x=23 und y=5");
+		Bindungen bind = new Bindungen();
+		bind.set("x", 23);
+		bind.set("y", 5);
+		Ausdruck f = new Addition(new Variable("x"), new Zahl(7));
+		Ausdruck g = new Division(f, new Zahl(3));
+		Ausdruck h = new Subtraktion(g, new Variable("y"));
+		Ausdruck i = new Multiplikation(new Zahl(10), h);
+		System.out.println(i + " = " + i.auswerten(bind));
+		System.out.println(bind);
+
+		System.out.println("Vierter Test (mit Variablen): (10 * (((x + 7) / 3) - y)) = 100 mit x=32 und y=3");
+		bind.set("x", 32);
+		bind.set("y", 3);
+		System.out.println(i + " = " + i.auswerten(bind));
+		System.out.println(bind);
+>>>>>>> refs/remotes/Main/master_
 	}
 }

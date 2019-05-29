@@ -1,6 +1,5 @@
 package Plotter;
 
-
 /*
  * Created on 30.12.2005
  *
@@ -14,6 +13,10 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import com.sun.org.apache.bcel.internal.classfile.Method;
+
+import Plotter.such.PlotterFrame;
+
 /**
  * @author Prof. Dr. Faustmann
  *
@@ -24,7 +27,7 @@ public class plott {
 
 	public static void main(String[] args) {
 		// Fenster mit Funktion erstellen:
-		PlotterFrame p = new PlotterFrame(new Quad());
+		PlotterFrame p = new PlotterFrame((DoubleMethod) new such());
 		// Fenster anzeigen:
 		p.setVisible(true);
 	}
@@ -34,63 +37,68 @@ interface DoubleMethod {
 	public double compute(double value);
 }
 
-class Quad implements DoubleMethod {
-	public double compute(double wert) {
-		return wert * wert;
+class such {
+	public Class name() throws ClassNotFoundException {
+		String buf = "FUNK*";
+		Class c = Class.forName(buf);
+		Class[] classes = c.getClasses();
+		if (classes.length > 0) {
+			for (int i = 0; i < classes.length - 1; i++) {
+				return classes[i];
+			}
+		}
+		return null;
 	}
-}
-
-//class F2 implements DoubleMethod {
-//}
 //
 //class F3 implements DoubleMethod {
 //}
 
-class PlotterFrame extends JFrame {
-	PlotterFrame(DoubleMethod funktion) {
-		setSize(600, 600);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		this.setTitle("Funktionsplotter");
-		PlotPanel p = new PlotPanel(funktion);
-		Container contentPane = getContentPane();
-		contentPane.add(p);
-	}
-}
-
-class PlotPanel extends JPanel {
-	DoubleMethod f;
-
-	PlotPanel(DoubleMethod f) {
-		this.f = f;
+	class PlotterFrame extends JFrame {
+		PlotterFrame(DoubleMethod funktion) {
+			setSize(600, 600);
+			setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			this.setTitle("Funktionsplotter");
+			PlotPanel p = new PlotPanel(funktion);
+			Container contentPane = getContentPane();
+			contentPane.add(p);
+		}
 	}
 
-	public void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Graphics2D g2 = (Graphics2D) g;
+	class PlotPanel extends JPanel {
+		DoubleMethod f;
 
-				// Koordinatensystem plotten
-				Line2D xAchse = new Line2D.Double(0, getHeight() / 2, getWidth(), getHeight() / 2);
-				Line2D yAchse = new Line2D.Double(getWidth() / 2, 0, getWidth() / 2, getHeight());
-				g2.draw(xAchse);
-				g2.draw(yAchse);
+		PlotPanel(DoubleMethod f) {
+			this.f = f;
+		}
 
-				// Wertetabelle berechnen
-				final int UMFANG = 200; // Wieviele zu differenziernde x-Werte
-				double weite = UMFANG / (double) getWidth(); // Weite eines Pixelschrittes im Koordinatensystem
-				ArrayList<Point2D> punkteListe = new ArrayList<Point2D>();
-				for (int x = -getWidth() / 2; x <= getWidth() / 2; x++) {
-					// punkteListe.add(anzeigeCoord(x, (1/weite)*f.compute(weite*x)));
-					punkteListe.add(anzeigeCoord(x, 40 * f.compute((1 / 40.0) * x)));
-				}
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			Graphics2D g2 = (Graphics2D) g;
 
-				// Funktion plotten
-				for (int i = 0; i + 1 < punkteListe.size(); ++i) {
-					Line2D line = new Line2D.Double((Point2D) punkteListe.get(i), (Point2D) punkteListe.get(i + 1));
-					g2.draw(line);
-				}
+			// Koordinatensystem plotten
+			Line2D xAchse = new Line2D.Double(0, getHeight() / 2, getWidth(), getHeight() / 2);
+			Line2D yAchse = new Line2D.Double(getWidth() / 2, 0, getWidth() / 2, getHeight());
+			g2.draw(xAchse);
+			g2.draw(yAchse);
+
+			// Wertetabelle berechnen
+			final int UMFANG = 200; // Wieviele zu differenziernde x-Werte
+			double weite = UMFANG / (double) getWidth(); // Weite eines Pixelschrittes im Koordinatensystem
+			ArrayList<Point2D> punkteListe = new ArrayList<Point2D>();
+			for (int x = -getWidth() / 2; x <= getWidth() / 2; x++) {
+				// punkteListe.add(anzeigeCoord(x, (1/weite)*f.compute(weite*x)));
+				punkteListe.add(anzeigeCoord(x, 40 * f.compute((1 / 40.0) * x)));
 			}
 
-	public Point2D anzeigeCoord(double x, double y) {
-		return new Point2D.Double(x + this.getWidth() / 2, this.getHeight() / 2 - y);
+			// Funktion plotten
+			for (int i = 0; i + 1 < punkteListe.size(); ++i) {
+				Line2D line = new Line2D.Double((Point2D) punkteListe.get(i), (Point2D) punkteListe.get(i + 1));
+				g2.draw(line);
+			}
+		}
+
+		public Point2D anzeigeCoord(double x, double y) {
+			return new Point2D.Double(x + this.getWidth() / 2, this.getHeight() / 2 - y);
+		}
 	}
 }

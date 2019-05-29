@@ -1,6 +1,8 @@
 package media;
 
-public abstract class Media {
+import java.io.Serializable;
+
+public abstract class Media implements Serializable{
 
 	public Media() {
 	}
