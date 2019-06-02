@@ -82,7 +82,8 @@ class such {
 			g2.draw(yAchse);
 
 			// Wertetabelle berechnen
-			final int UMFANG = 200; // Wieviele zu differenziernde x-Werte
+			// Wieviele zu differenziernde x-Werte
+			final int UMFANG = 200;
 			double weite = UMFANG / (double) getWidth(); // Weite eines Pixelschrittes im Koordinatensystem
 			ArrayList<Point2D> punkteListe = new ArrayList<Point2D>();
 			for (int x = -getWidth() / 2; x <= getWidth() / 2; x++) {
