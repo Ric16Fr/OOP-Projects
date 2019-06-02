@@ -64,7 +64,9 @@ public class myMedia {
 			ObjectInputStream in = new ObjectInputStream(new FileInputStream(datei + ".txt"));
 			medium = (Media[]) in.readObject();
 			in.close();
-			System.out.println(in);
+			System.out.println(in.readInt());
+			System.out.println(in.readDouble());
+			in.close();
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
