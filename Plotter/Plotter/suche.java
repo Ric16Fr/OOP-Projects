@@ -1,6 +1,7 @@
 package Plotter;
 
 import java.util.Vector;
+
 public interface suche {
 public suche() {
 	Vector v = new Vector();

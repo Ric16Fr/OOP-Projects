@@ -1,6 +1,6 @@
 package Plotter;
 
-public class FUNKdoublee implements DoubleMethod {
+public class FUNKTIONdoub implements DoubleMethod {
 	public double compute(double wert) {
 				return wert * wert;
 			}
