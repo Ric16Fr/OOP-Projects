@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="600.0" text="Bearbeitung bestehender Artikel" type="TitledPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditController">
+<TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="600.0" text="Bearbeitung bestehender Artikel" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.ricfr.app.controllers.EditController">
   <content>
     <AnchorPane>
          <children>
@@ -70,4 +70,4 @@
             <ChoiceBox layoutX="309.0" layoutY="17.0" prefWidth="150.0" />
          </children></AnchorPane>
   </content>
-</fx:root>
+</TitledPane>

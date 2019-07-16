@@ -8,36 +8,36 @@ import javafx.scene.control.CheckBox;
 
 public class ListController {
 
-	@FXML
-	private CheckBox check_filter;
+    @FXML
+    private CheckBox check_filter;
 
-	@FXML
-	private Button bt_edit;
+    @FXML
+    private Button bt_edit;
 
-	@FXML
-	private Button bt_delete;
+    @FXML
+    private Button bt_delete;
 
-	@FXML
-	private Button bt_abort;
+    @FXML
+    private Button bt_abort;
 
-	@FXML
-	void abortAction(ActionEvent event) {
-		AppMain.instance.loadScene("index");
-	}
+    @FXML
+    void abortAction(ActionEvent event) {
+    	AppMain.instance.loadScene("index");
+    }
 
-	@FXML
-	void deleteArticle(ActionEvent event) {
-		AppMain.instance.loadScene("delete");
-	}
+    @FXML
+    void deleteArticle(ActionEvent event) {
+    	AppMain.instance.loadScene("delete");
+    }
 
-	@FXML
-	void editArticle(ActionEvent event) {
-		AppMain.instance.loadScene("edit");
-	}
+    @FXML
+    void editArticle(ActionEvent event) {
+    	AppMain.instance.loadScene("edit");
+    }
 
-	@FXML
-	void filterDate(ActionEvent event) {
+    @FXML
+    void filterDate(ActionEvent event) {
 
-	}
+    }
 
 }

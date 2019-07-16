@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeleteController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.ricfr.app.controllers.DeleteController">
    <children>
       <Label layoutX="191.0" layoutY="14.0" text="Ausbuchen oder Löschen?">
          <font>
@@ -33,4 +33,4 @@
       <Button fx:id="bt_delete" layoutX="384.0" layoutY="182.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
       <Button fx:id="bt_abort" cancelButton="true" layoutX="29.0" layoutY="182.0" mnemonicParsing="false" onAction="#abortAction" text="Abbrechen (zurück zur Liste)" />
    </children>
-</fx:root>
+</Pane>

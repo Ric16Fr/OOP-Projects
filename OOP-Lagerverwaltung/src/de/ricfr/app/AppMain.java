@@ -22,13 +22,14 @@ public class AppMain extends Application {
 		loadScene("index");
 
 		
-		primaryStage.setTitle("Hello World");
+		primaryStage.setTitle("StuPaCa Lagerverwaltung");
 		primaryStage.centerOnScreen();
 		primaryStage.show();
 	}
 	public void loadScene(String name) {
 
 		try {
+			setRoot();
 			Parent root = FXMLLoader.load(getClass().getResource("layouts/" + name + ".fxml"));
 			Scene scene = new Scene(root);
 			
@@ -44,6 +45,10 @@ public class AppMain extends Application {
 
 	}
 	
+	private void setRoot() {
+		// TODO Auto-generated method stub
+		
+	}
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -38,9 +38,7 @@ public class InsertController {
 
     @FXML
     void abortAction(ActionEvent event) {
-    	
-        	AppMain.instance.loadScene("index");
-        
+    	AppMain.instance.loadScene("index");
     }
 
     @FXML

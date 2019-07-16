@@ -19,7 +19,7 @@ public class IndexController {
 
     @FXML
     void deleteArticle(ActionEvent event) {
-    	AppMain.instance.loadScene("edit");
+    	AppMain.instance.loadScene("delete");
     }
 
     @FXML
