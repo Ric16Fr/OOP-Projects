@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeleteController">
    <children>
       <Label layoutX="191.0" layoutY="14.0" text="Ausbuchen oder Löschen?">
          <font>
@@ -30,8 +29,8 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="512.0" layoutY="182.0" mnemonicParsing="false" text="Ausbuchen" textFill="#0023e8" />
-      <Button layoutX="384.0" layoutY="182.0" mnemonicParsing="false" text="Löschen" textFill="#e40303" />
-      <Button layoutX="29.0" layoutY="182.0" mnemonicParsing="false" text="Abbrechen (zurück zur Liste)" />
+      <Button fx:id="bt_sell" layoutX="512.0" layoutY="182.0" mnemonicParsing="false" onAction="#sellObject" text="Ausbuchen" textFill="#0023e8" />
+      <Button fx:id="bt_delete" layoutX="384.0" layoutY="182.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
+      <Button fx:id="bt_abort" cancelButton="true" layoutX="29.0" layoutY="182.0" mnemonicParsing="false" onAction="#abortAction" text="Abbrechen (zurück zur Liste)" />
    </children>
-</Pane>
+</fx:root>

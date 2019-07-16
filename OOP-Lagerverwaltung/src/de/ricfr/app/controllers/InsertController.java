@@ -1,13 +1,14 @@
 package de.ricfr.app.controllers;
 
-import java.awt.event.*;
-
+import de.ricfr.app.AppMain;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class InsertController {
 
@@ -37,7 +38,9 @@ public class InsertController {
 
     @FXML
     void abortAction(ActionEvent event) {
-
+    	
+        	AppMain.instance.loadScene("index");
+        
     }
 
     @FXML
@@ -47,7 +50,7 @@ public class InsertController {
 
     @FXML
     void saveAction(ActionEvent event) {
-
+    	AppMain.instance.loadScene("list");
     }
 
     @FXML

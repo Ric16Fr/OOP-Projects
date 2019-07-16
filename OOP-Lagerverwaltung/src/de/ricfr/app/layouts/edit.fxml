@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="600.0" text="Bearbeitung bestehender Artikel" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="600.0" text="Bearbeitung bestehender Artikel" type="TitledPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditController">
   <content>
     <AnchorPane>
          <children>
@@ -61,13 +61,13 @@
                   <Font name="Courier New" size="14.0" />
                </font>
             </Label>
-            <Button layoutX="479.0" layoutY="303.0" mnemonicParsing="false" text="Artikel speichern" textFill="#b20d0d">
+            <Button fx:id="bt_save" layoutX="479.0" layoutY="303.0" mnemonicParsing="false" onAction="#saveAction" text="Artikel speichern" textFill="#b20d0d">
                <effect>
                   <ColorAdjust />
                </effect>
             </Button>
-            <Button cancelButton="true" layoutX="11.0" layoutY="291.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="145.0" text="Abbrechen (zurück zur Liste)" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="bt_abort" cancelButton="true" layoutX="11.0" layoutY="291.0" mnemonicParsing="false" onAction="#abortAction" prefHeight="49.0" prefWidth="145.0" text="Abbrechen (zurück zur Liste)" textAlignment="CENTER" wrapText="true" />
             <ChoiceBox layoutX="309.0" layoutY="17.0" prefWidth="150.0" />
          </children></AnchorPane>
   </content>
-</TitledPane>
+</fx:root>
