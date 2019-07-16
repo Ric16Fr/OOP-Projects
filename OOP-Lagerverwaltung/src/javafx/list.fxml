@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Artikelliste" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <TableView layoutX="25.0" layoutY="23.0" prefHeight="283.0" prefWidth="391.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Name" />
+                <TableColumn prefWidth="75.0" text="Menge" />
+                  <TableColumn prefWidth="75.0" text="Gewinn" />
+                  <TableColumn prefWidth="94.0" text="Ablaufdatum" />
+                  <TableColumn prefWidth="71.0" text="Lagerplatz" />
+              </columns>
+            </TableView>
+            <CheckBox layoutX="459.0" layoutY="45.0" mnemonicParsing="false" text="Ablaufdatum &gt;3d" />
+            <Button layoutX="459.0" layoutY="121.0" mnemonicParsing="false" text="Artikel bearbeiten" />
+            <Button layoutX="456.0" layoutY="248.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="117.0" text="Artikel ausbuchen / löschen" textFill="#d72515" wrapText="true" />
+            <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" text="Abbrechen (zurück zum Hauptmenü)" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>
