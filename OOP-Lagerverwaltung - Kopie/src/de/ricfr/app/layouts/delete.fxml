@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DeleteController">
+   <children>
+      <Label layoutX="191.0" layoutY="14.0" text="Ausbuchen oder Löschen?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="48.0" prefHeight="84.0" prefWidth="563.0" text="Beim ausbuchen wird der Artikel in gewünschter Menge entfernt und der Gewinn dem Konto hinzugefügt, beim löschen nicht! Dieser Vorgang kann nicht rückgängig gemacht werden." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="119.0" prefHeight="53.0" prefWidth="64.0" text="Menge:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Slider layoutX="160.0" layoutY="135.0" prefHeight="21.0" prefWidth="292.0" />
+      <Label layoutX="93.0" layoutY="135.0" text="XXX" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt_sell" layoutX="512.0" layoutY="182.0" mnemonicParsing="false" onAction="#sellObject" text="Ausbuchen" textFill="#0023e8" />
+      <Button fx:id="bt_delete" layoutX="384.0" layoutY="182.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
+      <Button fx:id="bt_abort" cancelButton="true" layoutX="29.0" layoutY="182.0" mnemonicParsing="false" onAction="#abortAction" text="Abbrechen (zurück zur Liste)" />
+   </children>
+</fx:root>
