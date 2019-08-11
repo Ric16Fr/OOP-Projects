@@ -1,7 +1,7 @@
-package de.ricfr.controllers;
+package controllers;
 
 
-import de.ricfr.app.AppMain;
+import app.AppMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -1,4 +1,4 @@
-package de.ricfr.app;
+package app;
 import java.io.IOException;
 
 import javafx.application.Application;
@@ -33,7 +33,7 @@ public class AppMain extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("../layouts/" + name + ".fxml"));
 			Scene scene = new Scene(root);
 			
-			scene.getStylesheets().add("de/ricfr/app/style.css");
+			scene.getStylesheets().add("app/style.css");
 			
 			stage.setScene(scene);
 			stage.sizeToScene();
