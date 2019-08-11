@@ -8,12 +8,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class AppMain extends Application {
-	
 	public static AppMain instance;
 	private Stage stage;
 
 	// https://github.com/openjfx/samples/tree/master/IDE/Eclipse/Non-Modular/Java/hellofx/src/hellofx
 	// JavaFX SceneBuilder
+//	--module-path "C:\Users\Richard\Documents\OOP-Projekt\javafx-sdk-12.0.1\lib" --add-modules javafx.controls,javafx.fxml
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		AppMain.instance = this;

@@ -4,8 +4,12 @@ import app.AppMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 
 public class DeleteController {
+	
+    @FXML
+    private Slider int_amount;
 
     @FXML
     private Button bt_sell;
