@@ -1,14 +1,17 @@
-package de.ricfr.app.controllers;
+package de.ricfr.controllers;
 
 import de.ricfr.app.AppMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class EditController {
+public class DeleteController {
 
     @FXML
-    private Button bt_save;
+    private Button bt_sell;
+
+    @FXML
+    private Button bt_delete;
 
     @FXML
     private Button bt_abort;
@@ -19,7 +22,12 @@ public class EditController {
     }
 
     @FXML
-    void saveAction(ActionEvent event) {
+    void deleteObject(ActionEvent event) {
+    	AppMain.instance.loadScene("index");
+    }
+
+    @FXML
+    void sellObject(ActionEvent event) {
     	AppMain.instance.loadScene("list");
     }
 

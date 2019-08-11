@@ -1,4 +1,4 @@
-package de.ricfr.app.controllers;
+package de.ricfr.controllers;
 
 import de.ricfr.app.AppMain;
 import javafx.event.ActionEvent;

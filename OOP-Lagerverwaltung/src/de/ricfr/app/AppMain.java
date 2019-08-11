@@ -30,7 +30,7 @@ public class AppMain extends Application {
 
 		try {
 			setRoot();
-			Parent root = FXMLLoader.load(getClass().getResource("layouts/" + name + ".fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../layouts/" + name + ".fxml"));
 			Scene scene = new Scene(root);
 			
 			scene.getStylesheets().add("de/ricfr/app/style.css");
