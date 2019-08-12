@@ -29,7 +29,7 @@ public class DeleteController {
 	@FXML
 	void abortAction(ActionEvent event) {
 		AppMain.instance.loadScene("list");
-	}
+	} 
 
 	@FXML
 	void deleteObject(ActionEvent event) {
