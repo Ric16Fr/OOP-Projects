@@ -22,14 +22,15 @@ public class AppMain extends Application {
 
 		loadScene("index");
 
-		primaryStage.setTitle("StuPaCa Lagerverwaltung");
-		primaryStage.centerOnScreen();
-		primaryStage.show();
+		primaryStage.setTitle("StuPaCa Lagerverwaltung"); // Festlegen des Haupttitels
+		primaryStage.centerOnScreen(); // Ausrichtung des Fensters
+		primaryStage.show(); // Einblendung
 	}
 
 	public void loadScene(String name) {
 
 		try {
+			// Methode um die zu den einzelnen Seiten passende FXML Datei zu laden
 			setRoot();
 			Parent root = FXMLLoader.load(getClass().getResource("../layouts/" + name + ".fxml"));
 			Scene scene = new Scene(root);
@@ -37,19 +38,22 @@ public class AppMain extends Application {
 			stage.setScene(scene);
 			stage.sizeToScene();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			// Fehler, falls eine Seite nicht gefunden wird
+			System.out.println("Seite nicht gefunden, hier noch die Fehlermeldung:");
+			System.out.println();
 			e.printStackTrace();
 		}
 
 	}
 
 	private void setRoot() {
-		// TODO Auto-generated method stub
+		// setzt die Hauptseite. Wird eh durch die Suche überschrieben und kann daher
+		// leer bleiben
 
 	}
 
 	public static void main(String[] args) {
-		launch(args);
+		launch(args); // Aufruf der ersten Seite
 	}
 
 }
