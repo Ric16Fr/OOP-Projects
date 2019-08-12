@@ -1,4 +1,5 @@
 package app;
+
 import java.io.IOException;
 
 import javafx.application.Application;
@@ -21,20 +22,18 @@ public class AppMain extends Application {
 
 		loadScene("index");
 
-		
 		primaryStage.setTitle("StuPaCa Lagerverwaltung");
 		primaryStage.centerOnScreen();
 		primaryStage.show();
 	}
+
 	public void loadScene(String name) {
 
 		try {
 			setRoot();
 			Parent root = FXMLLoader.load(getClass().getResource("../layouts/" + name + ".fxml"));
 			Scene scene = new Scene(root);
-			
 			scene.getStylesheets().add("app/style.css");
-			
 			stage.setScene(scene);
 			stage.sizeToScene();
 		} catch (IOException e) {
@@ -42,13 +41,13 @@ public class AppMain extends Application {
 			e.printStackTrace();
 		}
 
-
 	}
-	
+
 	private void setRoot() {
 		// TODO Auto-generated method stub
-		
+
 	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}
