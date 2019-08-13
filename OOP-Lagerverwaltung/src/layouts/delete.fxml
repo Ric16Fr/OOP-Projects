@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeleteController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeleteController">
    <children>
       <Label layoutX="191.0" layoutY="14.0" text="Ausbuchen oder Löschen?">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="19.0" layoutY="48.0" prefHeight="84.0" prefWidth="563.0" text="Beim ausbuchen wird der Artikel in gewünschter Menge entfernt und der Gewinn dem Konto hinzugefügt, beim löschen nicht! Dieser Vorgang kann nicht rückgängig gemacht werden." textAlignment="CENTER" wrapText="true">
+      <Label layoutX="16.0" layoutY="190.0" prefHeight="84.0" prefWidth="563.0" text="Beim ausbuchen wird der Artikel in gewünschter Menge entfernt und der Gewinn dem Konto hinzugefügt, beim löschen nicht! Dieser Vorgang kann nicht rückgängig gemacht werden." textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="29.0" layoutY="119.0" prefHeight="53.0" prefWidth="64.0" text="Menge:" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="26.0" layoutY="261.0" prefHeight="53.0" prefWidth="64.0" text="Menge:" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Slider fx:id="int_amount" layoutX="160.0" layoutY="135.0" onDragDetected="#setAmount" prefHeight="21.0" prefWidth="292.0" />
-      <Label layoutX="93.0" layoutY="135.0" text="XXX" textFill="RED">
+      <Slider fx:id="int_amount" layoutX="157.0" layoutY="277.0" onDragDetected="#setAmount" prefHeight="21.0" prefWidth="292.0" />
+      <Label layoutX="90.0" layoutY="277.0" text="XXX" textFill="RED">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Button fx:id="bt_sell" layoutX="512.0" layoutY="182.0" mnemonicParsing="false" onAction="#sellObject" text="Ausbuchen" textFill="#0023e8" />
-      <Button fx:id="bt_delete" layoutX="384.0" layoutY="182.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
-      <Button fx:id="bt_abort" cancelButton="true" layoutX="29.0" layoutY="182.0" mnemonicParsing="false" onAction="#abortAction" text="Abbrechen (zurück zur Liste)" />
+      <Button fx:id="bt_sell" layoutX="509.0" layoutY="324.0" mnemonicParsing="false" onAction="#sellObject" text="Ausbuchen" textFill="#0023e8" />
+      <Button fx:id="bt_delete" layoutX="381.0" layoutY="324.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
+      <Button fx:id="bt_abort" cancelButton="true" layoutX="26.0" layoutY="324.0" mnemonicParsing="false" onAction="#abortAction" prefHeight="25.0" prefWidth="211.0" text="Abbrechen (zurück zur Liste)" />
+      <Button fx:id="bt_abortMain" cancelButton="true" layoutX="24.0" layoutY="367.0" mnemonicParsing="false" onAction="#abortActionMain" text="Abbrechen (zurück zum Huaptmenü)" />
+      <TextField fx:id="cur_income" editable="false" layoutX="26.0" layoutY="63.0" promptText="Einkaufspreis" />
+      <TextField fx:id="cur_outcome" editable="false" layoutX="26.0" layoutY="97.0" promptText="Verkaufspreis" />
+      <TextField fx:id="cur_marge" editable="false" layoutX="26.0" layoutY="127.0" promptText="Gewinn" />
+      <Label layoutX="191.0" layoutY="67.0" text="Einkaufspreis" />
+      <Label layoutX="191.0" layoutY="101.0" text="Verkaufspreis" />
+      <Label layoutX="191.0" layoutY="131.0" text="Gewinn" />
+      <ChoiceBox fx:id="articleID" layoutX="396.0" layoutY="97.0" prefWidth="150.0" />
+      <Label layoutX="396.0" layoutY="67.0" text="Gilt für folgenden Artikel:" />
    </children>
 </Pane>

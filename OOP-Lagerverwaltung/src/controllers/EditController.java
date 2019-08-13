@@ -5,18 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Spinner;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class EditController {
-
-	@FXML
-	private Button bt_save;
-
-	@FXML
-	private Button bt_abort;
 
 	@FXML
 	void abortAction(ActionEvent event) {
@@ -28,59 +21,69 @@ public class EditController {
 		AppMain.instance.loadScene("list");
 	}
 
-	@FXML
-	private TextField label_name;
+    @FXML
+    private TextField label_name;
 
-	@FXML
-	private Spinner<?> int_amount;
+    @FXML
+    private Button bt_save;
 
-	@FXML
-	private ChoiceBox<?> str_storage;
+    @FXML
+    private Button bt_abort;
 
-	@FXML
-	private Spinner<?> cur_income;
+    @FXML
+    private ChoiceBox<?> articleID;
 
-	@FXML
-	private Spinner<?> cur_outcome;
+    @FXML
+    private DatePicker date_wasted;
 
-	@FXML
-	private ComboBox<?> date_wasted;
+    @FXML
+    private TextField str_storage;
 
-	@FXML
-	private ChoiceBox<?> articleID;
+    @FXML
+    private TextField cur_income;
 
-	@FXML
-	void articleName(ActionEvent event) {
+    @FXML
+    private TextField cur_outcome;
 
-	}
+    @FXML
+    private TextField int_amount;
 
-	@FXML
-	void changeArticle(MouseEvent event) {
 
-	}
 
-	@FXML
-	void setAmount(MouseEvent event) {
+    @FXML
+    void articleName(ActionEvent event) {
 
-	}
+    }
 
-	@FXML
-	void setIncome(MouseEvent event) {
+    @FXML
+    void changeArticle(MouseEvent event) {
 
-	}
+    }
 
-	@FXML
-	void setStorage(MouseEvent event) {
 
-	}
+    @FXML
+    void setAmount(ActionEvent event) {
 
-	@FXML
-	void set_outcome(MouseEvent event) {
+    }
 
-	}
+    @FXML
+    void setIncome(ActionEvent event) {
 
-	@FXML
-	void wastedDate(ActionEvent event) {
+    }
 
-	}
+    @FXML
+    void setStorage(ActionEvent event) {
+
+    }
+
+    @FXML
+    void set_outcome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wastedDate(ActionEvent event) {
+
+    }
+
 }
