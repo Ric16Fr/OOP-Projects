@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 
 public class ListController {
 
@@ -39,5 +40,7 @@ public class ListController {
     void filterDate(ActionEvent event) {
 
     }
+    @FXML
+    private TextField articleID;
 
 }

@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class AppMain extends Application {
@@ -51,21 +50,6 @@ public class AppMain extends Application {
 		// setzt die Hauptseite. Wird eh durch die Suche überschrieben und kann daher
 		// leer bleiben
 
-	}
-	public class NumberTextField extends TextField {
-	    
-	    @Override public void replaceText(int start, int end, String text) {
-	           if (text.matches("[0-9]") || text == "") {
-	               super.replaceText(start, end, text);
-	           }
-	       }
-	     
-	       @Override public void replaceSelection(String text) {
-	           if (text.matches("[0-9]") || text == "") {
-	               super.replaceSelection(text);
-	           }
-	       }
-	 
 	}
 
 	public static void main(String[] args) {
