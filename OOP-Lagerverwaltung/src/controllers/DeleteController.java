@@ -15,8 +15,13 @@ public class DeleteController {
 	private Slider int_amount;
 
 	@FXML
-	void setAmount(MouseEvent event) {
+	int setAmount(MouseEvent int_amount) {
+	int x=	equal(int_amount);
+		return x;
+	}
 
+	private int equal(MouseEvent int_amount) {
+	return int_amount.getClickCount();
 	}
 
 	@FXML
@@ -35,12 +40,27 @@ public class DeleteController {
 
 	@FXML
 	void deleteObject(ActionEvent event) {
+		deleter(articleID, setAmount(null)); // TODO umändern auf reader
 		AppMain.instance.loadScene("list");
+	}
+
+	private boolean deleter(ChoiceBox<?> articleID, int setAmount) {
+	
+		boolean success = false;
+		return success;
+
 	}
 
 	@FXML
 	void sellObject(ActionEvent event) {
+		seller(articleID,setAmount(null)); //TODO umändern, auf reader
 		AppMain.instance.loadScene("list");
+	}
+
+	private boolean seller(ChoiceBox<?> articleID, int setAmount) {
+		boolean success = false;
+		return success;
+		
 	}
 
 	@FXML
