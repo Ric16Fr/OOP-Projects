@@ -14,7 +14,7 @@ public class AppMain extends Application {
 
 	// https://github.com/openjfx/samples/tree/master/IDE/Eclipse/Non-Modular/Java/hellofx/src/hellofx
 	// JavaFX SceneBuilder
-//	--module-path "<Pfad zum JavaFX>\javafx-sdk-12.0.1\lib" --add-modules javafx.controls,javafx.fxml
+//	--module-path "<Pfad zum Installationsverzeichnis>\OOP-Lagerverwaltung\src\javafx-sdk-12.0.1\lib" --add-modules javafx.controls,javafx.fxml
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		AppMain.instance = this;
