@@ -14,7 +14,7 @@
             <Button fx:id="bt_view" layoutX="243.0" layoutY="162.0" mnemonicParsing="false" onAction="#viewArticles" text="Artikelübersicht" />
             <Button fx:id="bt_delete" layoutX="400.0" layoutY="162.0" mnemonicParsing="false" onAction="#deleteArticle" text="Artikel löschen oder verkaufen" />
             <Label layoutX="29.0" layoutY="118.0" />
-            <Label layoutX="40.0" layoutY="41.0" text="Wilkommen zum großartigen StuPaCa Artikeleditor!">
+            <Label layoutX="40.0" layoutY="41.0" text="Willkommen zum großartigen StuPaCa Artikeleditor!">
                <font>
                   <Font name="Courier New" size="18.0" />
                </font>

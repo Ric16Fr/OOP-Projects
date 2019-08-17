@@ -34,7 +34,7 @@
       <Button fx:id="bt_sell" layoutX="509.0" layoutY="324.0" mnemonicParsing="false" onAction="#sellObject" text="Ausbuchen" textFill="#0023e8" />
       <Button fx:id="bt_delete" layoutX="381.0" layoutY="324.0" mnemonicParsing="false" onAction="#deleteObject" text="Löschen" textFill="#e40303" />
       <Button fx:id="bt_abort" cancelButton="true" layoutX="26.0" layoutY="324.0" mnemonicParsing="false" onAction="#abortAction" prefHeight="25.0" prefWidth="211.0" text="Abbrechen (zurück zur Liste)" />
-      <Button fx:id="bt_abortMain" cancelButton="true" layoutX="24.0" layoutY="367.0" mnemonicParsing="false" onAction="#abortActionMain" text="Abbrechen (zurück zum Huaptmenü)" />
+      <Button fx:id="bt_abortMain" cancelButton="true" layoutX="24.0" layoutY="367.0" mnemonicParsing="false" onAction="#abortActionMain" text="Abbrechen (zurück zum Hauptmenü)" />
       <TextField fx:id="cur_income" editable="false" layoutX="26.0" layoutY="63.0" promptText="Einkaufspreis" />
       <TextField fx:id="cur_outcome" editable="false" layoutX="26.0" layoutY="97.0" promptText="Verkaufspreis" />
       <TextField fx:id="cur_marge" editable="false" layoutX="26.0" layoutY="127.0" promptText="Gewinn" />
