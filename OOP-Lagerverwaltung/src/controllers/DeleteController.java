@@ -87,5 +87,4 @@ public class DeleteController {
 	void loadArticle(MouseEvent event) {
 
 	}
-Article
 }
