@@ -1,5 +1,8 @@
 package controllers;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import app.AppMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +21,16 @@ public class InsertController {
 
 	@FXML
 	void saveAction(ActionEvent event) {
+		try {
+			PrintWriter contentWriter = new PrintWriter(new FileWriter("content.txt"), true);
+			contentWriter.println("Test");
+			contentWriter.print(label_name.getText().toString());
+			contentWriter.print(date_wasted.getConverter().toString());
+			contentWriter.print(int_amount.getText().toString());
+			contentWriter.close();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 		AppMain.instance.loadScene("list");
 	}
 
@@ -82,5 +95,4 @@ public class InsertController {
 	void wastedDate(ActionEvent event) {
 
 	}
-
 }
