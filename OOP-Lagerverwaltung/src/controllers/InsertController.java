@@ -22,11 +22,11 @@ public class InsertController {
 	@FXML
 	void saveAction(ActionEvent event) {
 		try {
-			PrintWriter contentWriter = new PrintWriter(new FileWriter("content.txt"), true);
-			contentWriter.println("Test");
-			contentWriter.print(label_name.getText().toString());
-			contentWriter.print(date_wasted.getConverter().toString());
-			contentWriter.print(int_amount.getText().toString());
+			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.txt"), true);
+			contentWriter.print(label_name.getText());
+			contentWriter.print(date_wasted.getConverter());
+			contentWriter.print(int_amount.getText());
+			contentWriter.print(str_storage.getText());
 			contentWriter.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
