@@ -49,9 +49,6 @@ public class ListController<Artikel> {
 	@FXML
 	private TableView<Artikel> tableAll;
 	
-	ObservableList<Artikel> = getArticle() {
-		
-	}
 	@FXML
 	private TableColumn<?, ?> label_name;
 
