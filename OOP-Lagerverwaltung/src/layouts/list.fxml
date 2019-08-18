@@ -9,28 +9,29 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Artikelliste" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListController">
+<TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="745.0" text="Artikelliste" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="711.0">
          <children>
-            <TableView fx:id="tableAll" layoutX="25.0" layoutY="23.0" prefHeight="283.0" prefWidth="391.0">
+            <TableView fx:id="tableAll" layoutX="25.0" layoutY="23.0" prefHeight="283.0" prefWidth="491.0">
              <placeholder>
         <Label text="Keine Artikel erfasst" />
     </placeholder>
               <columns>
-                <TableColumn prefWidth="75.0" text="Name" />
-                <TableColumn prefWidth="75.0" text="Menge" />
-                  <TableColumn prefWidth="75.0" text="Gewinn" />
-                  <TableColumn prefWidth="94.0" text="Ablaufdatum" />
-                  <TableColumn prefWidth="71.0" text="Lagerplatz" />
+                <TableColumn fx:id="label_name" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="str_amount" prefWidth="75.0" text="Menge" />
+                  <TableColumn fx:id="cur_income" prefWidth="75.0" text="Einkaufspreis" />
+                  <TableColumn fx:id="cur_outcome" prefWidth="94.0" text="Verkaufspreis" />
+                  <TableColumn fx:id="date_wasted" prefWidth="89.0" text="Verfallsdatum" />
+                  <TableColumn fx:id="str_storage" prefWidth="69.0" text="Lagerplatz" />
               </columns>
             </TableView>
-            <CheckBox fx:id="check_filter" layoutX="457.0" layoutY="122.0" mnemonicParsing="false" onAction="#filterDate" text="Ablaufdatum &lt; 3d" />
-            <Button fx:id="bt_edit" layoutX="459.0" layoutY="175.0" mnemonicParsing="false" onAction="#editArticle" text="Artikel bearbeiten" />
-            <Button fx:id="bt_delete" layoutX="456.0" layoutY="248.0" mnemonicParsing="false" onAction="#deleteArticle" prefHeight="58.0" prefWidth="117.0" text="Artikel ausbuchen / löschen" textFill="#d72515" wrapText="true" />
+            <CheckBox fx:id="check_filter" layoutX="606.0" layoutY="122.0" mnemonicParsing="false" onAction="#filterDate" text="Ablaufdatum &lt; 3d" />
+            <Button fx:id="bt_edit" layoutX="608.0" layoutY="175.0" mnemonicParsing="false" onAction="#editArticle" text="Artikel bearbeiten" />
+            <Button fx:id="bt_delete" layoutX="605.0" layoutY="248.0" mnemonicParsing="false" onAction="#deleteArticle" prefHeight="58.0" prefWidth="117.0" text="Artikel ausbuchen / löschen" textFill="#d72515" wrapText="true" />
             <Button fx:id="bt_abort" cancelButton="true" layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#abortAction" text="Abbrechen (zurück zum Hauptmenü)" />
-            <TextField fx:id="articleID" editable="false" layoutX="431.0" layoutY="57.0" promptText="Gewinn" />
-            <Label layoutX="431.0" layoutY="34.0" text="Aktueller Gewinn in Euro:" />
+            <TextField fx:id="articleID" editable="false" layoutX="580.0" layoutY="57.0" promptText="Gewinn" />
+            <Label layoutX="580.0" layoutY="34.0" text="Aktueller Gewinn in Euro:" />
          </children></AnchorPane>
   </content>
 </TitledPane>

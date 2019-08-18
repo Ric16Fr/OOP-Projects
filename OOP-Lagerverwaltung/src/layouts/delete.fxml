@@ -41,7 +41,7 @@
       <Label layoutX="191.0" layoutY="67.0" text="Einkaufspreis" />
       <Label layoutX="191.0" layoutY="101.0" text="Verkaufspreis" />
       <Label layoutX="191.0" layoutY="131.0" text="Gewinn" />
-      <ChoiceBox fx:id="articleID" layoutX="396.0" layoutY="97.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="articleID" layoutX="396.0" layoutY="97.0" onDragDetected="#loadArticle" prefWidth="150.0" />
       <Label layoutX="396.0" layoutY="67.0" text="Gilt für folgenden Artikel:" />
    </children>
 </Pane>

@@ -5,10 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class ListController {
+public class ListController<Artikel> {
 
 	@FXML
 	private CheckBox check_filter;
@@ -44,8 +45,29 @@ public class ListController {
 
 	@FXML
 	private TextField articleID;
-	
+
 	@FXML
-	private TableView<?> tableAll;
+	private TableView<Artikel> tableAll;
+	
+	ObservableList<Artikel> = getArticle() {
+		
+	}
+	@FXML
+	private TableColumn<?, ?> label_name;
+
+	@FXML
+	private TableColumn<?, ?> str_amount;
+
+	@FXML
+	private TableColumn<?, ?> cur_income;
+
+	@FXML
+	private TableColumn<?, ?> cur_outcome;
+
+	@FXML
+	private TableColumn<?, ?> date_wasted;
+
+	@FXML
+	private TableColumn<?, ?> str_storage;
 
 }

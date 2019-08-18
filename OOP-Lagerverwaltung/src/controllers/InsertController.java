@@ -22,11 +22,26 @@ public class InsertController {
 	@FXML
 	void saveAction(ActionEvent event) {
 		try {
-			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.txt"), true);
+			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.csv"), true);
+			//contentWriter.println("Name: ");
 			contentWriter.print(label_name.getText());
-			contentWriter.print(date_wasted.getConverter());
+			contentWriter.println(";");
+		//	contentWriter.println("Ablaufdatum: ");
+			contentWriter.print(date_wasted.getValue());
+			contentWriter.println(";");
+		//	contentWriter.println("Menge: ");
 			contentWriter.print(int_amount.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Lagerplatz: ");
 			contentWriter.print(str_storage.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Einkaufspreis: ");
+			contentWriter.println(cur_income.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Verkaufspreis: ");
+			contentWriter.println(cur_outcome.getText());
+			contentWriter.println();
+			contentWriter.flush();
 			contentWriter.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();

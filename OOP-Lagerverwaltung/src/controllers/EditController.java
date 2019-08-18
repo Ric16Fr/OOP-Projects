@@ -1,5 +1,9 @@
 package controllers;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import app.AppMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +22,31 @@ public class EditController {
 
 	@FXML
 	void saveAction(ActionEvent event) {
+		try {
+			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.csv"), true);
+			//contentWriter.println("Name: ");
+			contentWriter.print(label_name.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Ablaufdatum: ");
+			contentWriter.print(date_wasted.getValue());
+			contentWriter.println(";");
+		//	contentWriter.println("Menge: ");
+			contentWriter.print(int_amount.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Lagerplatz: ");
+			contentWriter.print(str_storage.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Einkaufspreis: ");
+			contentWriter.println(cur_income.getText());
+			contentWriter.println(";");
+		//	contentWriter.println("Verkaufspreis: ");
+			contentWriter.println(cur_outcome.getText());
+			contentWriter.println();
+			contentWriter.flush();
+			contentWriter.close();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 		AppMain.instance.loadScene("list");
 	}
 
