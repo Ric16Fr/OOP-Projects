@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
 
 public class EditController {
@@ -24,25 +25,24 @@ public class EditController {
 	void saveAction(ActionEvent event) {
 		try {
 			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.csv"), true);
-			//contentWriter.println("Name: ");
+			// contentWriter.println("Name: ");
 			contentWriter.print(label_name.getText());
-			contentWriter.println(";");
-		//	contentWriter.println("Ablaufdatum: ");
+			contentWriter.print(";");
+			// contentWriter.println("Ablaufdatum: ");
 			contentWriter.print(date_wasted.getValue());
-			contentWriter.println(";");
-		//	contentWriter.println("Menge: ");
+			contentWriter.print(";");
+			// contentWriter.println("Menge: ");
 			contentWriter.print(int_amount.getText());
-			contentWriter.println(";");
-		//	contentWriter.println("Lagerplatz: ");
+			contentWriter.print(";");
+			// contentWriter.println("Einkaufspreis: ");
+			contentWriter.print(cur_income.getText());
+			contentWriter.print(";");
+			// contentWriter.println("Lagerplatz: ");
 			contentWriter.print(str_storage.getText());
-			contentWriter.println(";");
-		//	contentWriter.println("Einkaufspreis: ");
-			contentWriter.println(cur_income.getText());
-			contentWriter.println(";");
-		//	contentWriter.println("Verkaufspreis: ");
-			contentWriter.println(cur_outcome.getText());
+			contentWriter.print(";");
+			// contentWriter.println("Verkaufspreis: ");
+			contentWriter.print(cur_outcome.getText());
 			contentWriter.println();
-			contentWriter.flush();
 			contentWriter.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -50,69 +50,69 @@ public class EditController {
 		AppMain.instance.loadScene("list");
 	}
 
-    @FXML
-    private TextField label_name;
+	@FXML
+	private TextField label_name;
 
-    @FXML
-    private Button bt_save;
+	@FXML
+	private Button bt_save;
 
-    @FXML
-    private Button bt_abort;
+	@FXML
+	private Button bt_abort;
 
-    @FXML
-    private ChoiceBox<?> articleID;
+	@FXML
+	private ChoiceBox<?> articleID;
 
-    @FXML
-    private DatePicker date_wasted;
+	@FXML
+	private DatePicker date_wasted;
 
-    @FXML
-    private TextField str_storage;
+	@FXML
+	private TextField str_storage;
 
-    @FXML
-    private TextField cur_income;
+	@FXML
+	private TextField cur_income;
 
-    @FXML
-    private TextField cur_outcome;
+	@FXML
+	private TextField cur_outcome;
 
-    @FXML
-    private TextField int_amount;
+	@FXML
+	private TextField int_amount;
 
+	@FXML
+	void articleName(ActionEvent event) {
 
+	}
 
-    @FXML
-    void articleName(ActionEvent event) {
+	@FXML
+	void changeArticle(MouseEvent event) {
 
-    }
+	}
 
-    @FXML
-    void changeArticle(MouseEvent event) {
+	@FXML
+	void setAmount(ActionEvent event) {
 
-    }
+	}
 
+	@FXML
+	void setIncome(ActionEvent event) {
 
-    @FXML
-    void setAmount(ActionEvent event) {
+	}
 
-    }
+	@FXML
+	void setStorage(ActionEvent event) {
 
-    @FXML
-    void setIncome(ActionEvent event) {
+	}
 
-    }
+	@FXML
+	void set_outcome(ActionEvent event) {
 
-    @FXML
-    void setStorage(ActionEvent event) {
+	}
 
-    }
+	@FXML
+	void wastedDate(ActionEvent event) {
 
-    @FXML
-    void set_outcome(ActionEvent event) {
+	}
 
-    }
-
-    @FXML
-    void wastedDate(ActionEvent event) {
-
-    }
+	@FXML
+	private TitledPane frame;
 
 }

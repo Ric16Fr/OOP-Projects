@@ -40,7 +40,6 @@ public class InsertController {
 			contentWriter.println(";");
 		//	contentWriter.println("Verkaufspreis: ");
 			contentWriter.println(cur_outcome.getText());
-			contentWriter.println();
 			contentWriter.flush();
 			contentWriter.close();
 		} catch (IOException ex) {
