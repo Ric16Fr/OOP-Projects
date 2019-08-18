@@ -1,0 +1,2 @@
+Test
+hhDatePicker[id=date_wasted, styleClass=combo-box-base date-picker]
