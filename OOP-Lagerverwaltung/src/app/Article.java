@@ -12,10 +12,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- * @author Julius Kiekbusch (kiekbjul@b-tu.de)
- * @category Programmierpraktikum
- */
+
 public class Article {
 
 	public final StringProperty name = new SimpleStringProperty();

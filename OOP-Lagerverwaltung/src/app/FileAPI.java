@@ -9,10 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * @author Julius Kiekbusch (kiekbjul@b-tu.de)
- * @category Programmierpraktikum
- */
 public class FileAPI {
 	
 	public final static String filename = "src/content.csv";

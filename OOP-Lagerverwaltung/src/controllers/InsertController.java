@@ -22,6 +22,7 @@ public class InsertController {
 		AppMain.instance.articles.add(new Article(this));
 		AppMain.instance.saveArticles();
 		AppMain.instance.editArticle = null;
+		AppMain.instance.loadScene("list");
 	}
 
 	@FXML
