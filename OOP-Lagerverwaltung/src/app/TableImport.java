@@ -47,7 +47,7 @@ public abstract class TableImport extends Application {
 
 	}
 
-	private final TableView<Record> tableAll = new TableView<>();
+	private final TableView<Record> tableAll = new TableView<Record>();
 
 	private final ObservableList<Record> dataList = FXCollections.observableArrayList();
 

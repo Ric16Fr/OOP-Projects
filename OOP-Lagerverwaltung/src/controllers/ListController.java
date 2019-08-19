@@ -1,15 +1,20 @@
 package controllers;
 
+import java.time.LocalDate;
+
 import app.AppMain;
+import app.Article;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListController<Artikel> {
+public class ListController {
 
 	@FXML
 	private CheckBox check_filter;
@@ -30,11 +35,13 @@ public class ListController<Artikel> {
 
 	@FXML
 	void deleteArticle(ActionEvent event) {
+		AppMain.instance.editArticle = tableAll.selectionModelProperty().get().getSelectedItem();
 		AppMain.instance.loadScene("delete");
 	}
 
 	@FXML
 	void editArticle(ActionEvent event) {
+		AppMain.instance.editArticle = tableAll.selectionModelProperty().get().getSelectedItem();
 		AppMain.instance.loadScene("edit");
 	}
 
@@ -42,29 +49,41 @@ public class ListController<Artikel> {
 	void filterDate(ActionEvent event) {
 
 	}
+	
+	@FXML
+	void initialize() {
+		tableAll.setItems(AppMain.instance.articles);
+		tableAll.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		label_name.setCellValueFactory(new PropertyValueFactory<Article, String>("name"));
+		str_amount.setCellValueFactory(new PropertyValueFactory<Article, Integer>("amount"));
+		cur_income.setCellValueFactory(new PropertyValueFactory<Article, Integer>("income"));
+		cur_outcome.setCellValueFactory(new PropertyValueFactory<Article, Integer>("outcome"));
+		date_wasted.setCellValueFactory(new PropertyValueFactory<Article, LocalDate>("wasted"));
+		str_storage.setCellValueFactory(new PropertyValueFactory<Article, String>("storage"));
+	}
 
 	@FXML
 	private TextField articleID;
 
 	@FXML
-	private TableView<Artikel> tableAll;
+	private TableView<Article> tableAll;
 	
 	@FXML
-	private TableColumn<?, ?> label_name;
+	private TableColumn<Article, String> label_name;
 
 	@FXML
-	private TableColumn<?, ?> str_amount;
+	private TableColumn<Article, Integer> str_amount;
 
 	@FXML
-	private TableColumn<?, ?> cur_income;
+	private TableColumn<Article, Integer> cur_income;
 
 	@FXML
-	private TableColumn<?, ?> cur_outcome;
+	private TableColumn<Article, Integer> cur_outcome;
 
 	@FXML
-	private TableColumn<?, ?> date_wasted;
+	private TableColumn<Article, LocalDate> date_wasted;
 
 	@FXML
-	private TableColumn<?, ?> str_storage;
+	private TableColumn<Article, String> str_storage;
 
 }

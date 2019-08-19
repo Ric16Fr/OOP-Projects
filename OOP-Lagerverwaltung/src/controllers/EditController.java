@@ -1,10 +1,7 @@
 package controllers;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import app.AppMain;
+import app.Article;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,6 +12,21 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseEvent;
 
 public class EditController {
+	
+	@FXML
+	public void initialize() {
+		Article article = AppMain.instance.editArticle;
+		if(article == null) {
+			AppMain.instance.loadScene("list");
+			return;
+		}
+		label_name.setText(article.getName());
+		str_storage.setText(article.getStorage());
+		int_amount.setText(String.valueOf(article.getAmount()));
+		cur_income.setText(String.valueOf(article.getIncome()));
+		cur_outcome.setText(String.valueOf(article.getOutcome()));
+		date_wasted.setValue(article.getWasted());
+	}
 
 	@FXML
 	void abortAction(ActionEvent event) {
@@ -23,59 +35,37 @@ public class EditController {
 
 	@FXML
 	void saveAction(ActionEvent event) {
-		try {
-			PrintWriter contentWriter = new PrintWriter(new FileWriter("src\\content.csv"), true);
-			// contentWriter.println("Name: ");
-			contentWriter.print(label_name.getText());
-			contentWriter.print(";");
-			// contentWriter.println("Ablaufdatum: ");
-			contentWriter.print(date_wasted.getValue());
-			contentWriter.print(";");
-			// contentWriter.println("Menge: ");
-			contentWriter.print(int_amount.getText());
-			contentWriter.print(";");
-			// contentWriter.println("Einkaufspreis: ");
-			contentWriter.print(cur_income.getText());
-			contentWriter.print(";");
-			// contentWriter.println("Lagerplatz: ");
-			contentWriter.print(str_storage.getText());
-			contentWriter.print(";");
-			// contentWriter.println("Verkaufspreis: ");
-			contentWriter.print(cur_outcome.getText());
-			contentWriter.println();
-			contentWriter.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+		AppMain.instance.editArticle.update(this);
+		AppMain.instance.saveArticles();
 		AppMain.instance.loadScene("list");
 	}
 
 	@FXML
-	private TextField label_name;
+	public TextField label_name;
 
 	@FXML
-	private Button bt_save;
+	public Button bt_save;
 
 	@FXML
-	private Button bt_abort;
+	public Button bt_abort;
 
 	@FXML
-	private ChoiceBox<?> articleID;
+	public ChoiceBox<?> articleID;
 
 	@FXML
-	private DatePicker date_wasted;
+	public DatePicker date_wasted;
 
 	@FXML
-	private TextField str_storage;
+	public TextField str_storage;
 
 	@FXML
-	private TextField cur_income;
+	public TextField cur_income;
 
 	@FXML
-	private TextField cur_outcome;
+	public TextField cur_outcome;
 
 	@FXML
-	private TextField int_amount;
+	public TextField int_amount;
 
 	@FXML
 	void articleName(ActionEvent event) {

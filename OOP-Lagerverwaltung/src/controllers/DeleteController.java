@@ -40,7 +40,8 @@ public class DeleteController {
 
 	@FXML
 	void deleteObject(ActionEvent event) {
-		// deleter(articleID, setAmount(null)); // TODO umändern auf reader
+		// deleter(articleID, setAmount(null)); // TODO umï¿½ndern auf reader
+		AppMain.instance.articles.remove(AppMain.instance.editArticle);
 		AppMain.instance.loadScene("list");
 	}
 
@@ -53,7 +54,7 @@ public class DeleteController {
 
 	@FXML
 	void sellObject(ActionEvent event) {
-		seller(articleID, setAmount(null)); // TODO umändern, auf reader
+		seller(articleID, setAmount(null)); // TODO umï¿½ndern, auf reader
 		AppMain.instance.loadScene("list");
 	}
 
