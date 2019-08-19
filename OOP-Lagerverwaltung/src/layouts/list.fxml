@@ -13,7 +13,7 @@
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="711.0">
          <children>
-            <TableView fx:id="tableAll" layoutX="25.0" layoutY="23.0" prefHeight="283.0" prefWidth="491.0">
+            <TableView fx:id="tableAll" editable="true" layoutX="25.0" layoutY="23.0" prefHeight="283.0" prefWidth="491.0" tableMenuButtonVisible="true">
              <placeholder>
         <Label text="Keine Artikel erfasst" />
     </placeholder>
